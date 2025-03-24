@@ -1,0 +1,322 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+  }
+
+
+/* SECCIÓN DE NAVBAR */
+
+/* Estilos del navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Transparente al inicio */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/*cambiar el nav-link.active*/
+.nav-link.active {
+    color: #ffc800 !important; /* Cambia el color del texto cuando está activo */
+    font-weight: bold; /* Resalta el texto (opcional) */
+    border-radius: 5px; /* Añade bordes redondeados (opcional) */
+    padding: 5px 10px; /* Ajusta el espaciado (opcional) */
+}
+
+/* Tamaño inicial del logo (más grande en la parte superior) */
+.navbar-brand {
+    font-size: 2.8rem; /* Tamaño más grande al inicio */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: font-size 0.3s ease-in-out;
+}
+
+/* Al hacer scroll, reducimos el tamaño */
+.navbar.scrolled .navbar-brand {
+    font-size: 2.8rem; /* Ahora el logo se hace más pequeño */
+}
+
+.navbar a {
+    font-size: 1.2rem;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav {
+    gap: 20px;
+}
+
+/* Cuando hace scroll */
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.948);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled a {
+    color: black;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc800; /* Cambia de color al pasar el mouse (opcional) */
+    font-weight: bold;
+}
+
+/* Asegurar que el botón de hamburguesa tenga fondo blanco */
+.navbar-toggler {
+    background-color: white; /* Fondo blanco */
+    border: 1px solid #ddd; /* Borde opcional */
+    padding: 8px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* SECCIÓN 1 */
+
+/* Ajuste de la imagen */
+.full-width-img {
+    width: 100%;  /* Ajusta el ancho al 100% del contenedor */
+    height: 100vh;        /* Ajusta la altura al 60% del viewport height */
+    object-fit: cover;   /* Corta la imagen para evitar deformaciones */
+}
+
+/* Estilos del texto */
+.text-overlay {
+    width: 80%;
+    font-size: clamp(2rem, 4.5vw, 3rem); /* Ajuste dinámico */
+    text-align: center;
+    
+}
+.text-shadow{
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Tamaño del botón */
+.btn-xl {
+    font-size: clamp(1.2rem, 5vw, 1.6rem); /* Ajuste dinámico */
+    padding: 15px 40px; /* Aumenta el padding */
+}
+
+
+
+/* SECCIÓN 2 */
+
+/* Diseño de la card */
+.why-us-card {
+    background-color: #07270f; /* Color similar al de la imagen */
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    color: #ffffff; /* Cambia el color de todo el texto dentro de la card */
+}
+
+/* Títulos de las cards */
+.why-us-card .card-title {
+    font-size: clamp(1.4rem, 2vw, 1.8rem); /* Ajuste dinámico según el ancho de la pantalla */
+    font-weight: bold;
+}
+
+/* Texto dentro de las cards */
+.why-us-card .card-text {
+    font-size: clamp(1.3rem, 1.5vw, 1.4rem); /* Ajuste dinámico para mejor legibilidad */
+}
+
+.icon-card {
+    font-size: 2.5rem; /* Ajusta el tamaño del icono */
+    color: #ffc800; /* Color del icono */
+    margin-bottom: 10px; /* Espaciado entre el icono y el título */
+    display: block; /* Para que quede en su propia línea */
+}
+
+
+
+.titles {
+    color: #07270f;
+    font-size: clamp(3rem, 4.5vw, 4rem);
+}
+
+/* SECCIÓN 3 */
+
+/* Fondo de la sección */
+.section-cliente-experto {
+    background-color: #07270f;
+}
+
+/* Título */
+.titlesdos {
+    color: #ffffff;
+    font-size: clamp(3rem, 4.5vw, 4rem);
+}
+
+/* Texto principal alineado a la izquierda pero centrado en la sección */
+.section-cliente-experto p {
+    font-size: clamp(1.5rem, 1.5vw, 2rem);
+    text-align: left;
+    max-width: 900px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* Destacar el span */
+.section-cliente-experto p span {
+    font-weight: 700;
+    font-size: clamp(1.5rem, 1.5vw, 2rem);
+}
+
+/* Botón centrado */
+.section-cliente-experto a.btn {
+    text-align: center;
+}
+
+/* Carrusel */
+.texto-sombreado {
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#carouselClienteExperto img {
+    object-fit: cover;
+    object-position: center;
+    height: 60vh;
+    width: 100%;
+}
+
+/* Centrar el texto en la imagen */
+.carousel-caption {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+}
+
+/* Estilos del texto en el carrusel */
+.carousel-caption h1 {
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: bold;
+}
+
+.carousel-caption h5 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: normal;
+}
+
+
+/* SECCIÓN4 */
+.solution-card {
+    background-color: #07270f; /* Color similar al de la imagen */
+    /*border: 2px solid black; */
+    border-radius: 10px;
+    padding: 20px;
+    color: #ffffff; /* Cambia el color de todo el texto dentro de la card */
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.318); /* Sombra suave */
+    transition: box-shadow 0.3s ease-in-out; /* Suaviza el efecto */
+}
+
+/* Efecto hover para resaltar la card */
+.solution-card:hover {
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.737);
+}
+
+/* Títulos de las cards */
+.solution-card .card-title {
+    font-size: clamp(1.4rem, 2vw, 1.8rem); /* Ajuste dinámico según el ancho de la pantalla */
+    font-weight: bold;
+}
+
+/* Texto dentro de las cards */
+.solution-card .card-text {
+    font-size: clamp(1.3rem, 1.5vw, 1.4rem); /* Ajuste dinámico para mejor legibilidad */
+    text-align: left;
+}
+
+/* SECCIÓN 5 */
+/* Ajuste de la imagen */
+.partial-width-img {
+    width: 100%;  /* Ajusta el ancho al 100% del contenedor */
+    height: 88vh;        /* Ajusta la altura al 60% del viewport height */
+    object-fit: cover;   /* Corta la imagen para evitar deformaciones */
+}
+
+/* SECCIÓN 6 */
+
+/* Fondo de la sección */
+.section-contacto {
+    background-color: #07270f; /* Cambia esto al color que prefieras */
+}
+
+#mensajeAlerta {
+    position: fixed; /* Para que flote sobre el contenido */
+    top: 50%; /* Lo centra verticalmente */
+    left: 50%; /* Lo centra horizontalmente */
+    transform: translate(-50%, -50%); /* Centra perfectamente */
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+    width: 80%; /* Se ajusta en móviles */
+    max-width: 400px; /* Evita que sea muy grande en pantallas grandes */
+    font-size: 1.2rem; /* Letra más grande */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+    display: none; /* Oculto por defecto */
+}
+
+/* Diferentes colores para éxito y error */
+.alert-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.alert-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+
+
+
+/* RESPONSIVIDAD */
+
+/* Responsividad de navbar */
+@media (max-width: 1023px) {
+    .navbar {
+        background-color: white !important;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: agrega sombra */
+    }
+    .navbar .nav-link.active {
+        color: #ffc800 !important; /* Asegura que el color activo sea amarillo */
+    }
+    .navbar .nav-link {
+        color: black !important; /* Asegura que el texto sea visible */
+    }
+
+    .navbar .navbar-brand {
+        color: black;
+    }
+
+  }
+
+/* Responsividad de botones */
+@media (max-width: 1024px) {
+    .btn-xl {
+        width: 100%; /* Botón ocupa todo el ancho en pantallas medianas y pequeñas */
+    }
+}
+
+/* Responsividad de boton container*/
+@media (max-width: 1023px) {
+    .btn-container {
+        order: 2; /* Mueve el botón hacia abajo */
+        display: flex;
+        justify-content: center; /* Centra el botón */
+        width: 100%; /* Ocupará todo el ancho */
+        margin-top: 20px; /* Espaciado superior */
+    }
+}
+
+
+
+
+
